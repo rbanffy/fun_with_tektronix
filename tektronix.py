@@ -8,7 +8,7 @@ CSI = ESC + "["
 
 def tek_mode():
     "Enter Tektronix mode"
-    print(CSI + "38h")
+    print(CSI + "?38h")
 
 def vt100_mode():
     "Goes back to VT100 mode"
