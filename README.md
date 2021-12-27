@@ -1,8 +1,8 @@
-# fun_with_tektronix
+# Fun With Tektronix
 
-Tektronix storage tube terminals were some of the coolest terminals that ever existed. They had no such thing as pixels - they drew on the phosphor screen with an electron beam the same way a pen plotter draws on paper. 
+Tektronix direct view storage tube terminals were some of the coolest terminals that ever existed. They had no such thing as pixels - they drew on the phosphor screen with an electron beam the same way a pen plotter draws on paper. 
 
-Storage tubes can be drawn to with a low power beam, in which case the image will have to be frequently redrawn, or with a high power beam, in which case the image will be stored and kept refreshed by the tube itself without the need to redraw it. This gives them their distinctive effect where the line that's being drawn is very bright in relation to the rest of the display and where you can pinpoint where the updates are happening by watching the bright spot. The last ones were capable of two colors by having an extra layer of red phosphor on top of the green one - by controlling the power of the writing beam, the terminal could excite one or two layers, allowing it to make green and yellow traces.
+Storage tubes can be drawn to with a low power beam, in which case the image will have to be frequently redrawn, or with a high power beam, in which case the image will be stored and kept refreshed by the tube itself without the need to redraw it. This gives them their distinctive "feel" where the line that's being drawn is very bright in relation to the rest of the display and where you can pinpoint where the updates are happening by watching the bright spot. The last ones were capable of two colors by having an extra layer of red phosphor on top of the green one - by controlling the power of the writing beam, the terminal could excite one or two layers, allowing it to make green and yellow traces.
 
 It also has the unsettling characteristic of building the image by firing a high-power particle gun in your general direction.
 
