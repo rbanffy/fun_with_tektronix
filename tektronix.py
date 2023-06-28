@@ -22,11 +22,11 @@ def vt100_mode():
 
 
 def clear():
-    "Clears the screen. On a real Tektronix, this flashes the screen white"
-    print(ESC + FF)
+    "Clears the screen. On a real Tektronix, this flashes the screen"
+    sys.stdout.write(ESC + FF + CR)
 
 
-def coord(x, y):
+def coord(x: int, y: int):
     "Translates coordinates to Tek strings"
     if x < 0 or x > 1024 or y < 0 or y > 768:
         raise ValueError(f"Invalid coordinates ({x}, {y})")
