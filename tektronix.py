@@ -1,9 +1,14 @@
 import sys
 
 ESC = chr(27)
+
+CR = chr(13)
+CSI = ESC + "["
 ETX = chr(3)
 FF = chr(12)
-CSI = ESC + "["
+FS = chr(28)
+GS = chr(29)
+US = chr(31)
 
 
 def tek_mode():
