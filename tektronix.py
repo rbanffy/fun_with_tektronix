@@ -1,5 +1,5 @@
-GS = chr(29)
-US = chr(31)
+import sys
+
 ESC = chr(27)
 ETX = chr(3)
 FF = chr(12)
