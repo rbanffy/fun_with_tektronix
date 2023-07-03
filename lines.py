@@ -3,13 +3,12 @@
 import random
 import time
 
-from tektronix import tek_mode, vt100_mode, clear, line, move_to, line_to, US
-
+from tektronix import US, clear, line, line_to, move_to, tek_mode, vt100_mode
 
 if __name__ == "__main__":
     tek_mode()
     clear()
-    move_to(0, 700)
+    move_to(0, 750)
     print(US + "Fun with Tektronix")
 
     # 200 lines
