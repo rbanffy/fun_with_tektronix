@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tektronix"
+version = "1.0"
+
+[options]
+packages = ["src/tektronix"]
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 80
+
+[tool.flake8]
+max-line-length = 80
+count = true
