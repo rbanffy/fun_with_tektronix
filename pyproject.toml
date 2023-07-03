@@ -11,10 +11,10 @@ packages = ["src/tektronix"]
 
 [tool.isort]
 profile = "black"
+skip_glob = ["__pycache__/*", "env/*"]
 
 [tool.black]
 line-length = 80
 
 [tool.flake8]
 max-line-length = 80
-count = true
