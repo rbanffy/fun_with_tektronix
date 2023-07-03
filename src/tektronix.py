@@ -26,15 +26,42 @@ def clear():
     sys.stdout.write(ESC + FF + CR)
 
 
-def coord(x: int, y: int):
-    "Translates coordinates to Tek strings"
+def coord(x: int, y: int) -> bytearray:
+    """Translates coordinates to Tek strings
+
+    Coordinates are 10-bits, split 5 bits per byte and added to an offset so
+    that characters are printable. Coordinates are presented in y, x order,
+    each encoded as 2 butes, with 5 bits in each byte.
+
+    .=====!..=====!..=====!..=====
+    100000011000000010000001000000 (0,0)
+     └───┘   └───┘   └───┘   └───┘
+       0       0       0       0
+      " "     "`"     " "     "@"
+    100000011000010010000001000001 (1,1)
+     └───┘   └───┘   └───┘   └───┘
+       0       1       0       1
+      " "     "a"     " "     "A"
+    100001011000010010000101000001 (33,33)
+     └───┘   └───┘   └───┘   └───┘
+       1       1       1       1
+      "!"     "a"     "!"     "A"
+    101111011111110011111101011111 (1023, 511)
+     └───┘   └───┘   └───┘   └───┘
+       31      65      65      65
+      "/"   [RUBOUT]  "?"     "_"
+
+    >>> coord(33, 33)
+    b'!a!A'
+
+    """
     if x < 0 or x > 1024 or y < 0 or y > 768:
         raise ValueError(f"Invalid coordinates ({x}, {y})")
     return (
-        chr(32 + (y // 32))
-        + chr(96 + (y & 31))
-        + chr(32 + x // 32)
-        + chr(64 + (x & 31))
+        bytes(chr(0b00100000 + (y // 32)), "ascii") # offset 32 (space)
+        + bytes(chr(0b01100000 + (y & 31)), "ascii") # offset 96 (backtick)
+        + bytes(chr(0b00100000 + x // 32), "ascii") # offset 32 (space)
+        + bytes(chr(0b01000000 + (x & 31)), "ascii") # offset 64 (@)
     )
 
 
