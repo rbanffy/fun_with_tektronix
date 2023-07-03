@@ -18,3 +18,6 @@ line-length = 80
 
 [tool.flake8]
 max-line-length = 80
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules"
