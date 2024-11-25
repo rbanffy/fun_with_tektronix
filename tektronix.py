@@ -49,6 +49,28 @@ def text_size(n: int) -> None:
     sys.stdout.write(ESC + sizes[n])
 
 
+def line_style(n: int) -> None:
+    styles = [
+        "`",  # Solid
+        "a",  # Dotted
+        "b",  # Dot-dash
+        "c",  # Short dash
+        "d",  # Long dash
+        "e",  # Solid
+        "f",  # Solid
+        "g",  # Solid
+        "h",  # Solid
+        "i",  # Dotted
+        "j",  # Dot-dash
+        "k",  # Short dash
+        "l",  # Long dash
+        "m",  # Solid
+        "n",  # Solid
+        "o",  # Solid
+    ]
+    sys.stdout.write(ESC + styles[n])
+
+
 def move_to(x: int, y: int) -> None:
     sys.stdout.write(GS + coord(x, y) + US)
 
