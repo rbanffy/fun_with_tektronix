@@ -46,11 +46,11 @@ def coord(x: int, y: int) -> bytearray:
 
 def text_size(n: int) -> None:
     sizes = ["8", "9", ":", ";", "0", "1", "2", "3"]
-    sys.stdout.write(ESC + sizes[n] + CR)
+    sys.stdout.write(ESC + sizes[n])
 
 
 def move_to(x: int, y: int) -> None:
-    sys.stdout.write(GS + coord(x, y))
+    sys.stdout.write(GS + coord(x, y) + US)
 
 
 def line(x1: int, y1: int, x2: int, y2: int) -> None:
