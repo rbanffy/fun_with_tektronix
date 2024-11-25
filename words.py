@@ -15,5 +15,5 @@ if __name__ == "__main__":
         print("Tektronix")
         time.sleep(0.05)
     time.sleep(5)
+    tek_mode(False)
     vt100_mode()
-    # tek_mode(False)
